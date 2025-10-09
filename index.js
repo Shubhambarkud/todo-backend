@@ -11,7 +11,11 @@ var app = express();
 
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ["https://mydevproject.store"], // your frontend domain
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 app.get("/get-users", (req,res)=>{
     mongoClient.connect(conStr).then(clientObj=>{
