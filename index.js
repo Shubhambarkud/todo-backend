@@ -12,7 +12,7 @@ var app = express();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cors({
-  origin: ["https://mydevproject.store"], // your frontend domain
+  origin: ["http://localhost:3000","https://mydevproject.store"], // your frontend domain
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
