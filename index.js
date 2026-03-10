@@ -12,7 +12,7 @@ var app = express();
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 app.use(cors({
-  origin: ["http://localhost:3000","https://mydevproject.store"], // your frontend domain
+  origin: ["http://localhost:3000","https://mydevproject.store","https://gorgeous-alpaca-60314b.netlify.app"], // your frontend domain
   methods: ["GET", "POST", "PUT", "DELETE"],
   credentials: true
 }));
