@@ -78,6 +78,7 @@ app.post("/add-task", (req,res)=>{
         };
         database.collection("appointments").insertOne(appointment).then(()=>{
             console.log("Task added succesfully")
+          res.send("Task added successfully");
         });
     });
 });
